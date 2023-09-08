@@ -3,6 +3,8 @@
 
 A robust `.NET 7` application designed to manage notes. The application is backed by a PostgreSQL database running in Docker and comes with built-in Google Analytics support.
 
+[Dev env remote](https://noteapp-398407.uc.r.appspot.com/api/v1/notes)
+
 ## Features
 
 - **Database**: Utilizes PostgreSQL as its primary data store.
