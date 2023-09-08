@@ -8,7 +8,7 @@ COPY ["/NotesApi.csproj", "NotesApi/"]
 RUN dotnet restore "NotesApi/NotesApi.csproj"
 COPY . .
 WORKDIR "/src"
-RUN dotnet build "NotesApi.csproj" -c Release -o /app/build
+RUN dotnet build "NotesApi.csproj" -c Release -o /app/build/NotesApi
 
 FROM build AS publish
 RUN dotnet publish "NotesApi.csproj" -c Release -o /app/publish
