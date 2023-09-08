@@ -21,6 +21,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
     <PackageReference Include="O9d.AspNet.FluentValidation" Version="0.1.1" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.6.0" />
   </ItemGroup>
 
   <ItemGroup>
