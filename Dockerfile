@@ -4,10 +4,10 @@ EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["NotesApi.csproj", "NotesApi/"]
+COPY ["/NotesApi.csproj", "NotesApi/"]
 RUN dotnet restore "NotesApi/NotesApi.csproj"
 COPY . .
-WORKDIR "/NotesApi"
+WORKDIR "/src/NotesApi"
 RUN dotnet build "NotesApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
