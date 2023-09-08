@@ -5,11 +5,11 @@ COPY ["NotesApi.csproj", "NotesApi/"]
 RUN dotnet restore "NotesApi/NotesApi.csproj"
 COPY . .
 WORKDIR "/src"
-RUN dotnet build "NotesApi/NotesApi.csproj" -c Release -o /app/build
+RUN dotnet build "NotesApi.csproj" -c Release -o /app/build
 
 # Stage 2: Publish the ASP.NET Core application
 FROM build AS publish
-RUN dotnet publish "NotesApi/NotesApi.csproj" -c Release -o /app/publish
+RUN dotnet publish "NotesApi.csproj" -c Release -o /app/publish
 
 # Stage 3: Build the NGINX stage
 FROM nginx:latest AS nginx
