@@ -1,7 +1,7 @@
 ﻿# Stage 1: Build the ASP.NET Core application
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["NotesApi/NotesApi.csproj", "NotesApi/"]
+COPY ["NotesApi.csproj", "NotesApi/"]
 RUN dotnet restore "NotesApi/NotesApi.csproj"
 COPY . .
 WORKDIR "/src"
